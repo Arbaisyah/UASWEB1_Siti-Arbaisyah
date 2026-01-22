@@ -1,16 +1,11 @@
 <?php
 session_start();
-
-if (!isset($_SESSION['email'])) {
-    header("Location: index.php");
-    exit;
-}
 ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard POLGAN MART</title>
+    <title>Dashboard POLGANMART</title>
     <style>
         body {
             margin: 0;
@@ -102,8 +97,9 @@ if (!isset($_SESSION['email'])) {
     <h2>Dashboard</h2>
     <a href="dashboard.php">Home</a>
     <a href="dashboard.php?page=listproducts">List Produk</a>
-    <a href="dashboard.php?page=pelanggan">Customer</a>
-    <a href="dashboard.php?page=penjualan">Transaksi</a>
+    <a href="dashboard.php?page=customer">Customer</a>
+    <a href="dashboard.php?page=transaksi">Transaksi</a>
+    <a href="dashboard.php?page=laporan">Laporan</a>
 </div>
 
 <div class="header">
