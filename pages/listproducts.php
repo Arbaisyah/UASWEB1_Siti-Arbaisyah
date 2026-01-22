@@ -84,7 +84,7 @@ th {
             <td><?= $row['stok']; ?></td>
             <td><?= $row['satuan']; ?></td>
             <td>
-                <a href="pages/profile.php?id=<?= $row['id_barang']; ?>" class="btn btn-edit">Edit</a>
+               <a href="pages/profile.php?id=<?= $row['id_barang']; ?>&type=barang" class="btn btn-edit">Edit</a>
                 <a href="dashboard.php?page=hapus&id=<?= $row['id_barang']; ?>" 
                    class="btn btn-hapus"
                    onclick="return confirm('Yakin hapus data?')">

@@ -94,8 +94,7 @@ td .btn { margin: 0 2px; }
             <td><?= $row['email'] ?? '-'; ?></td>
             <td>
                 <!-- EDIT Pelanggan → pakai profile.php tapi versi pelanggan -->
-                <a href="pages/profile.php?id=<?= $row['id_pelanggan']; ?>&type=customer" class="btn btn-edit">Edit</a>
-                <!-- HAPUS Pelanggan -->
+               <a href="pages/profile.php?id=<?= $row['id_pelanggan']; ?>&type=customer" class="btn btn-edit">Edit</a>
                 <a href="dashboard.php?page=customer&hapus=<?= $row['id_pelanggan']; ?>" 
                    class="btn btn-hapus"
                    onclick="return confirm('Yakin hapus data?')">Hapus</a>
