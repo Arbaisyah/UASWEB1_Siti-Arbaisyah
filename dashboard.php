@@ -13,6 +13,7 @@ session_start();
             background: #f4f4f4;
         }
 
+        /* Sidebar */
         .sidebar {
             width: 220px;
             height: 100vh;
@@ -40,6 +41,7 @@ session_start();
             background: #34495e;
         }
 
+        /* Header */
         .header {
             height: 60px;
             background: white;
@@ -59,6 +61,7 @@ session_start();
             color: white;
         }
 
+        /* Dropdown */
         .dropdown {
             position: relative;
         }
@@ -84,6 +87,7 @@ session_start();
             background: #f0f0f0;
         }
 
+        /* Content */
         .content {
             margin-left: 220px;
             padding: 20px;
@@ -97,6 +101,7 @@ session_start();
     <h2>Dashboard</h2>
     <a href="dashboard.php">Home</a>
     <a href="dashboard.php?page=listproducts">List Produk</a>
+    
     <a href="dashboard.php?page=customer">Customer</a>
     <a href="dashboard.php?page=transaksi">Transaksi</a>
     <a href="dashboard.php?page=laporan">Laporan</a>
@@ -113,16 +118,16 @@ session_start();
 </div>
 
 <div class="content">
-<?php
-$page = $_GET['page'] ?? 'home';
-$file = "pages/$page.php";
+    <?php
+    $page = $_GET['page'] ?? 'home';
+    $file = "pages/$page.php";
 
-if (file_exists($file)) {
-    include $file;
-} else {
-    echo "<h2>Welcome Dashboard</h2>";
-}
-?>
+    if (file_exists($file)) {
+        include $file;
+    } else {
+        echo "<h2>Welcome Dashboard</h2>";
+    }
+    ?>
 </div>
 
 <script>
@@ -131,8 +136,8 @@ function toggleMenu() {
     menu.style.display = (menu.style.display === "block") ? "none" : "block";
 }
 
-window.onclick = function(e) {
-    if (!e.target.matches('.profile-btn')) {
+window.onclick = function(event) {
+    if (!event.target.matches('.profile-btn')) {
         document.getElementById("profileMenu").style.display = "none";
     }
 }
