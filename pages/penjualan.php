@@ -45,7 +45,26 @@ label { font-weight:600; }
 </style>
 
 <!-- FORM TAMBAH -->
+<div class="form-container" id="formTambah">
+    <h3>Tambah Penjualan</h3>
+    <form method="post">
+        <label>Tanggal</label>
+        <input type="date" name="tanggal" required>
 
+        <label>Pelanggan</label>
+        <select name="id_pelanggan" required>
+            <option value="">-- Pilih Pelanggan --</option>
+            <?php while($pl=mysqli_fetch_assoc($pelanggan)): ?>
+                <option value="<?= $pl['id_pelanggan']; ?>"><?= $pl['nama_pelanggan']; ?></option>
+            <?php endwhile; ?>
+        </select>
+
+        <label>Total</label>
+        <input type="number" name="total" required>
+
+        <button type="submit" name="simpan" class="btn-submit">Simpan</button>
+    </form>
+</div>
 
 <!-- LIST PENJUALAN -->
 <div class="card">
