@@ -101,9 +101,8 @@ session_start();
     <h2>Dashboard</h2>
     <a href="dashboard.php">Home</a>
     <a href="dashboard.php?page=listproducts">List Produk</a>
-    
     <a href="dashboard.php?page=customer">Customer</a>
-    <a href="dashboard.php?page=transaksi">Transaksi</a>
+    <a href="dashboard.php?page=penjualan">Transaksi</a>
     <a href="dashboard.php?page=laporan">Laporan</a>
 </div>
 
