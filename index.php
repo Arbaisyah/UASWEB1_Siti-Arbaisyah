@@ -13,9 +13,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = mysqli_query($conn, "SELECT * FROM users WHERE email='$email'");
     if ($row = mysqli_fetch_assoc($result)) {
         if ($password == $row['password']) {
-            $_SESSION['email'] = $row['email'];
-            $_SESSION['name']  = $row['name'];
-            $_SESSION['role']  = $row['role'];
+           $_SESSION['user'] = [
+    'id'    => $row['id'],
+    'name'  => $row['name'],
+    'email' => $row['email'],
+    'role'  => $row['role']
+];
+
 
             header("Location: dashboard.php");
             exit;

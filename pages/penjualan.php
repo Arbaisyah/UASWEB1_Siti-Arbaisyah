@@ -88,7 +88,7 @@ label { font-weight:600; }
             <td><?= $row['nama_pelanggan']; ?></td>
             <td>Rp <?= number_format($row['total'],0,',','.'); ?></td>
             <td>
-                <a href="pages/profile.php?id=<?= $row['id_penjualan']; ?>&type=penjualan" class="btn btn-edit">Edit</a>
+                <a href="pages/edit.php?id=<?= $row['id_penjualan']; ?>&type=penjualan" class="btn btn-edit">Edit</a>
                 <a href="?page=penjualan&hapus=<?= $row['id_penjualan']; ?>" class="btn btn-hapus" onclick="return confirm('Yakin hapus data?')">Hapus</a>
             </td>
         </tr>
